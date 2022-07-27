@@ -19,12 +19,9 @@ onMounted(() => {
 });
 let prevScrollpos = window.scrollY;
 function handleScroll() {
-  console.log(window.scrollY);
-
   window.onscroll = function () {
     const currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos) {
-      console.log("up");
       menuCategories.value.style.top = currentScrollPos > 53 ? "0" : "58px";
     } else {
       menuCategories.value.style.top = currentScrollPos < 56 ? "0 " : "-100px";
